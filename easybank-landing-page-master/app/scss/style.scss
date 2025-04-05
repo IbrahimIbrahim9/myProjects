@@ -1,0 +1,12 @@
+// I have changed the setting (settings.json) to make the auto generating of the main.css in the dest folder 
+
+@import "variables";
+@import "mixins";
+@import "animations";
+
+@import "globals";
+@import "header";
+@import "hero";
+@import "feature";
+@import "article";
+@import "footer";
