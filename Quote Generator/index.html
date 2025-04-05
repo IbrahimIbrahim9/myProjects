@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="quotes-box">
+        <h2>Quote of the day </h2>
+        <blockquote>Loading...</blockquote>
+        <div class="spans-parent">
+            <span class="line"></span><span class="author">Loading...</span>
+        </div>
+        <div>
+            <button onclick="getQuote(api_url)">New Quote</button>
+            <button onclick="tweet()"><img src="/icons8-twitter-logo-48.png" alt="">Tweet</button>
+        </div>
+    </div>
+</body>
+<script>
+    let blockQuote = document.querySelector("blockquote");
+    let authorName = document.querySelector(".quotes-box .author");
+    var api_url = "https://api.quotable.io/random";
+    async function getQuote(api_url) {
+        let result = await fetch(api_url);
+        let data = await result.json();
+        blockQuote.innerHTML = data.content;
+        authorName.innerHTML = data.author;
+    }
+    getQuote(api_url)
+    // when you refresh the page all the code re-executed such that the quote changes
+    function tweet() {
+        window.open("https://twitter.com/intent/tweet?text=" + blockQuote.innerHTML + " ---- by " + authorName.innerHTML ,"Tweet Window","width:600px ,height = 300px ")
+    }
+</script>
+
+</html>

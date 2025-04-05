@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>Javascript<br> <span>Age Calculator</span></h1>
+            <div class="input-box">
+                <input type="date" id="date">
+                <button onclick="calculateAge()">calculate</button>
+            </div>
+            <p id="result"></p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+<script>
+    let userInput = document.getElementById("date");
+    let result = document.getElementById("result");
+    userInput.max = new Date().toISOString().split("T")[0];
+    function calculateAge() {
+        const birthDate = new Date(userInput.value);
+        const today = new Date();
+
+        let years = today.getFullYear() - birthDate.getFullYear();
+        let months = today.getMonth() - birthDate.getMonth();
+        let days = today.getDate() - birthDate.getDate();
+
+        if (days < 0) {
+            // Borrow days from the previous month
+            months--;
+            days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+            // it means : give me the 0 day of this month which is not logical so
+            // so it gives the last day of the previous month and then give me it's number
+        }
+
+        if (months < 0) {
+            // Borrow months from the previous year
+            years--;
+            months += 12;
+        }
+        if (isNaN(years)) {
+            result.innerHTML = `please enter your age !`;
+        } else {
+            result.innerHTML = `You are <span>${years}</span> years , <span>${months}</span> months and <span>${days}</span> days`;
+        }
+    }
+
+</script>
+
+</html>

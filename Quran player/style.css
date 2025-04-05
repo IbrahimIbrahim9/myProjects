@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: #0A3044;
+    --second-color : #78504e;
+}
+
+body {
+    background-color: #b4b3b3;
+}
+
+.container {
+    width: 300px;
+    background-color: var(--main-color);
+    margin: 100px auto 0;
+    padding: 20px;
+}
+
+.container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.container .header i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+
+}
+
+.container .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.container .content img {
+    width: 200px;
+    height: 200px;
+    border: 10px solid white;
+    border-radius: 50%;
+    margin-bottom: 20px;
+
+}
+
+.container .content h3 {
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.container .content p {
+    font-size: 12px;
+}
+#progress {
+    /*hide the default*/
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff ;
+    margin: 40px 0;
+}
+
+#progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    border: 8px solid #fff;
+    box-shadow: 0 5px 5px rgba(222, 215, 215, 0.22);
+}
+
+.container .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container .footer i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container .footer i:nth-child(2) {
+    transform: scale(1.5);
+}
+
+

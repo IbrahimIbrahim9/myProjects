@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+.parent {
+    height: 100vh;
+}
+.parent .header {}
+.parent .header .container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+.parent .header .container img {
+
+}
+.parent .header .container ul {
+    display: flex;
+    list-style: none;
+}
+.parent .header .container ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+}
+
+.parent .content {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+}
+.parent .content .left {
+
+}
+.parent .content .left h1 {
+    
+}
+.parent .content .left p {
+    
+}
+.parent .content .left  {
+    
+}
+.parent .content .right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.parent .content .right img:nth-child(1) {
+    position: absolute;
+    z-index: -1;
+}
+.parent .content .right img:nth-child(2) {
+}
+
+
+

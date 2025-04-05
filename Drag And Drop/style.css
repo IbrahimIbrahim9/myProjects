@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: rgb(34, 34, 108);
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: #0b0423;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent div {
+    flex: 1;
+    border: 10px dotted white;
+}
+.parent div p {
+    font-size: 40px;
+    padding: 15px 20px ;
+    margin: 40px 20px ;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+}
+#right , #left {
+    width: 300px;
+    min-height: 400px;
+    margin: 20px;
+    border: 2px dashed #fff;
+}
+.list {
+    background-color: #e91e63;
+    height: 60px;
+    margin: 30px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: grab;
+}
+.list img {
+    width: 10px;
+    margin-right: 15px;
+    margin-left: 20px;
+}

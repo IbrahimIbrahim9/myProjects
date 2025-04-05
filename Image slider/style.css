@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #191919;
+
+}
+.gallery {
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+    transition: 0.6s;
+    scroll-behavior: smooth;
+
+}
+.gallery div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none; /*not flex : 1 , so I assume I am taking only the inline attribute of the flex */
+
+}
+.gallery div img {
+    width: 100%; /*of the father span , the span is 280px because of the auto grid */
+    filter: grayscale(100%);
+    transition: 0.6s;
+}
+.gallery div img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+.gallery-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% auto;
+}
+#back-btn,
+#next-btn {
+    width: 50px;
+    cursor: pointer;
+    margin: 40px; /*if above me empty why would I move up or bottom */
+}

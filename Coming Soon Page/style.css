@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body {
+    background-color: black;
+}
+img {
+    width: 300px;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    animation: go-up 3s linear   forwards;
+    opacity: 0;
+}
+@keyframes go-up {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-500px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-900px);
+    }
+}

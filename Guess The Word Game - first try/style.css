@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "poppins", sans-serif;
+}
+
+:root {
+    --Yellow-color: #ff9a06;
+    --Bg-color: #1a202a;
+    --Green-color: #0ba889;
+    --Black-color: #293046;
+    --Orange-color: #dc472b;
+    --Hint-color: #007579;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Bg-color);
+}
+
+.box {
+    width: 600px;
+    min-height: 400px;
+    background-color: #e6e6e6;
+}
+
+.box h1 {
+    background-color: white;
+    box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.left {
+    flex: 1;
+}
+
+.left>div {
+    font-size: 25px;
+    height: 38px;
+}
+
+.left>div.first-try {
+    font-size: 26.99px;
+}
+
+.left>div:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.left>div input {
+    width: 35px;
+    height: 35px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 29px;
+    border-bottom: 2px solid black;
+
+}
+
+.right {
+    flex: 1;
+    text-align: center;
+}
+
+.right h4 {
+    font-weight: 900;
+}
+
+.right p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: white;
+}
+
+.right p span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.right p:first-of-type span {
+    background-color: var(--Yellow-color);
+}
+
+.right p:nth-child(3) span {
+    background-color: var(--Green-color);
+}
+
+.right p:last-of-type span {
+    background-color: var(--Black-color);
+}
